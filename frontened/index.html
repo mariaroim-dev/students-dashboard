@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список студентов</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <div class="container pt-4">
+    <h1 class="mb-4 text-center">Панель управления студентами</h1>
+    <h2 class="mb-3">Добавить нового студента</h2>
+    <form class="mb-4" id="student-form">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="surname">Фамилия</label>
+          <input type="text" class="form-control" id="surname">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="name">Имя</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="middle-name">Отчество</label>
+          <input type="text" class="form-control" id="middle-name">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="faculty">Факультет</label>
+          <input type="text" class="form-control" id="faculty">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="birth-date">Дата рождения</label>
+          <input type="date" class="form-control" id="birth-date">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="start-year">Год начала обучения</label>
+          <input type="text" class="form-control" id="start-year">
+        </div>
+      </div>
+      <div id="form-errors" class="text-danger"></div>
+      <button type="submit" class="btn btn-primary mt-2">Добавить студента</button>
+    </form>
+    <h3 class="mb-3">Фильтрировать по:</h3>
+    <form class="mb-4" id="filter-form">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="filter-name">Ф.И.О</label>
+          <input type="text" class="form-control" id="filter-name">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="filter-faculty">Факультет</label>
+          <input type="text" class="form-control" id="filter-faculty">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="filter-start-year">Год начала обучения</label>
+          <input type="text" class="form-control" id="filter-start-year">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="filter-end-year">Год окончания обучения</label>
+          <input type="text" class="form-control" id="filter-end-year">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Фильтровать</button>
+    </form>
+    <h2 class="mb-3">Список студентов</h2>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="text-center" id="th-full-name">Ф.И.О</th>
+          <th scope="col" class="text-center" id="th-faculty">Факультет</th>
+          <th scope="col" class="text-center" id="th-birth-date-age">Дата рождения и возраст</th>
+          <th scope="col" class="text-center" id="study-years">Годы обучения</th>
+          <th scope="col" class="text-center"></th>
+        </tr>
+      </thead>
+      <tbody class="table-striped" id="students-table-body">
+
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
